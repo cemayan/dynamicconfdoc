@@ -81,7 +81,6 @@
 <h4 id="redis-installation-windows">Redis installation: (Windows)</h4>
 <ul>
 <li><a href="http://download.redis.io/releases/redis-4.0.9.tar.gz">Download redis</a></li>
-<li>Run <strong>redis-server.exe</strong></li>
 </ul>
 <h4 id="bower-installation-macoslinuxwindows">Bower installation: (macOS,Linux,Windows)</h4>
 <pre><code>npm install -g bower
@@ -105,6 +104,11 @@
 <li><strong>refreshTimerIntervalInMs</strong>, for data synchronization on a regular basis</li>
 </ul>
 <hr />
+<p>You should run Redis :</p>
+<ul>
+<li>Run <strong>redis-server</strong>(for macOS)</li>
+<li>Run <strong>redis-server.exe</strong>(for Windows)</li>
+</ul>
 <p>Dynamic Config After initializing, you can use the following to read the configuration file data: : </p>
 <pre><code class="c#">string value = _configurationReader.GetValue&lt;string&gt;(key);
 </code></pre>
@@ -191,5 +195,5 @@
 
 <!--
 MkDocs version : 0.17.2
-Build Date UTC : 2018-05-20 19:28:28
+Build Date UTC : 2018-05-20 19:31:08
 -->

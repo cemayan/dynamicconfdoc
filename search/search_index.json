@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to Documentation\n\n\n\n\nDynamic Config\n\n\nDynamic Config creates a dynamic configuration structure. The Dynamic Config extension reads information from the config file extensions and automatically updates it (from the web interface).\n\n\nInstallion\n\n\nRedis and bower are required for the operation of the application.\n\n\nRedis installation: (macOS)\n\n\n brew update\n\n brew install redis\n\n\n\n\n\n\nIf Homebrew is not installed, you can install it as follows : \n\n\n\n\nxcode-select --install\n/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"\n\n\n\n\nRedis installation: (Windows)\n\n\n\n\nDownload redis\n\n\nRun \nredis-server.exe\n\n\n\n\nBower installation: (macOS,Linux,Windows)\n\n\nnpm install -g bower\n\n\n\n\n\n\nIf npm is not installed, you should install Node.js : \n\n\n\n\nDownload Node.js\n\n\n\n\nUsage\n\n\n\n\nInitialize with three parameters :  \n\n\n\n\nIConfig _configurationReader = new ConfigurationReader(\"SiteName\",\"localhost\",TimeSpan.FromMinutes(1));\n\n\n\n\n\n\napplicationName\n, for application name\n\n\nconnectionString\n, for storage connection information  \n\n\nrefreshTimerIntervalInMs\n, for data synchronization on a regular basis\n\n\n\n\n\n\nDynamic Config After initializing, you can use the following to read the configuration file data: : \n\n\nstring value = _configurationReader.GetValue<string>(key);",
+            "text": "Welcome to Documentation\n\n\n\n\nDynamic Config\n\n\nDynamic Config creates a dynamic configuration structure. The Dynamic Config extension reads information from the config file extensions and automatically updates it (from the web interface).\n\n\nInstallion\n\n\nRedis and bower are required for the operation of the application.\n\n\nRedis installation: (macOS)\n\n\n brew update\n\n brew install redis\n\n\n\n\n\n\nIf Homebrew is not installed, you can install it as follows : \n\n\n\n\nxcode-select --install\n/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"\n\n\n\n\nRedis installation: (Windows)\n\n\n\n\nDownload redis\n\n\n\n\nBower installation: (macOS,Linux,Windows)\n\n\nnpm install -g bower\n\n\n\n\n\n\nIf npm is not installed, you should install Node.js : \n\n\n\n\nDownload Node.js\n\n\n\n\nUsage\n\n\n\n\nInitialize with three parameters :  \n\n\n\n\nIConfig _configurationReader = new ConfigurationReader(\"SiteName\",\"localhost\",TimeSpan.FromMinutes(1));\n\n\n\n\n\n\napplicationName\n, for application name\n\n\nconnectionString\n, for storage connection information  \n\n\nrefreshTimerIntervalInMs\n, for data synchronization on a regular basis\n\n\n\n\n\n\nYou should run Redis :\n\n\n\n\nRun \nredis-server\n(for macOS)\n\n\nRun \nredis-server.exe\n(for Windows)\n\n\n\n\nDynamic Config After initializing, you can use the following to read the configuration file data: : \n\n\nstring value = _configurationReader.GetValue<string>(key);",
             "title": "Home"
         },
         {
@@ -27,7 +27,7 @@
         },
         {
             "location": "/#redis-installation-windows",
-            "text": "Download redis  Run  redis-server.exe",
+            "text": "Download redis",
             "title": "Redis installation: (Windows)"
         },
         {
@@ -42,7 +42,7 @@
         },
         {
             "location": "/#usage",
-            "text": "Initialize with three parameters :     IConfig _configurationReader = new ConfigurationReader(\"SiteName\",\"localhost\",TimeSpan.FromMinutes(1));   applicationName , for application name  connectionString , for storage connection information    refreshTimerIntervalInMs , for data synchronization on a regular basis    Dynamic Config After initializing, you can use the following to read the configuration file data: :   string value = _configurationReader.GetValue<string>(key);",
+            "text": "Initialize with three parameters :     IConfig _configurationReader = new ConfigurationReader(\"SiteName\",\"localhost\",TimeSpan.FromMinutes(1));   applicationName , for application name  connectionString , for storage connection information    refreshTimerIntervalInMs , for data synchronization on a regular basis    You should run Redis :   Run  redis-server (for macOS)  Run  redis-server.exe (for Windows)   Dynamic Config After initializing, you can use the following to read the configuration file data: :   string value = _configurationReader.GetValue<string>(key);",
             "title": "Usage"
         }
     ]
