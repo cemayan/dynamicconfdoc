@@ -52,11 +52,64 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#welcome-to-documentation">Welcome to Documentation</a></li>
+            <li><a href="#dynamic-config">Dynamic Config</a></li>
+            <li><a href="#installion">Installion</a></li>
+            <li><a href="#usage">Usage</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-documentation">Welcome to Documentation</h1></div>
+<h1 id="welcome-to-documentation">Welcome to Documentation</h1>
+<hr />
+<h2 id="dynamic-config">Dynamic Config</h2>
+<p>Dynamic Config creates a dynamic configuration structure. The Dynamic Config extension reads information from the config file extensions and automatically updates it (from the web interface).</p>
+<h2 id="installion">Installion</h2>
+<p>Redis and bower are required for the operation of the application.</p>
+<h4 id="redis-installation-macos">Redis installation: (macOS)</h4>
+<pre><code> brew update
+
+ brew install redis
+</code></pre>
+
+<blockquote>
+<p>If Homebrew is not installed, you can install it as follows : </p>
+</blockquote>
+<pre><code>xcode-select --install
+/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<h4 id="redis-installation-windows">Redis installation: (Windows)</h4>
+<ul>
+<li><a href="http://download.redis.io/releases/redis-4.0.9.tar.gz">Download redis</a></li>
+<li>Run <strong>redis-server.exe</strong></li>
+</ul>
+<h4 id="bower-installation-macoslinuxwindows">Bower installation: (macOS,Linux,Windows)</h4>
+<pre><code>npm install -g bower
+</code></pre>
+
+<blockquote>
+<p>If npm is not installed, you should install Node.js : </p>
+</blockquote>
+<h5 id="download-nodejs"><a href="https://nodejs.org/en/download/">Download Node.js</a></h5>
+<hr />
+<h2 id="usage">Usage</h2>
+<blockquote>
+<p>Initialize with three parameters :  </p>
+</blockquote>
+<pre><code class="c#">IConfig _configurationReader = new ConfigurationReader(&quot;SiteName&quot;,&quot;localhost&quot;,TimeSpan.FromMinutes(1));
+</code></pre>
+
+<ul>
+<li><strong>applicationName</strong>, for application name</li>
+<li><strong>connectionString</strong>, for storage connection information  </li>
+<li><strong>refreshTimerIntervalInMs</strong>, for data synchronization on a regular basis</li>
+</ul>
+<hr />
+<p>Dynamic Config After initializing, you can use the following to read the configuration file data: : </p>
+<pre><code class="c#">string value = _configurationReader.GetValue&lt;string&gt;(key);
+</code></pre>
+
+<p><img src="image.png"></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -138,5 +191,5 @@
 
 <!--
 MkDocs version : 0.17.2
-Build Date UTC : 2018-05-20 18:35:38
+Build Date UTC : 2018-05-20 19:28:28
 -->
